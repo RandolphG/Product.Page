@@ -3,6 +3,21 @@
 [![IMG_00](_img_00.png)]
 [![IMG_00](_img_03.png)]
 
+### Installation process :
+
+- clone repo
+- navigate to project folder
+- install all dependencies with yarn or npm
+- run with yarn or npm
+
+
+```bash
+$ git clone https://github.com/RandolphG/Product.Page.git
+$ cd project
+$ yarn or npm i
+$ yarn dev or npm run dev
+```
+
 -	Create a reusable React component that will render the layout provided,
 -   Design is responsive. 
 -	Rendered data from a JSON file in a /config folder
