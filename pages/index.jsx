@@ -1,6 +1,6 @@
 import ProductCardBody from "../components/ProductCardBody";
 import ProductCardImage from "../components/ProductCardImage";
-import { getProducts } from "../services/products-service";
+import { getProducts } from "../services";
 import { motion } from "framer-motion";
 
 /* Our custom easing*/

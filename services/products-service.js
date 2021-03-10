@@ -1,4 +1,4 @@
-export async function getProducts() {
+export const getProducts = async () => {
   const data = require("../config/config.json");
 
   if (
@@ -11,4 +11,4 @@ export async function getProducts() {
   }
 
   throw new Error("products config malformed");
-}
+};
