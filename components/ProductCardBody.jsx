@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import useWindowSize from '../hooks/useWindowSize';
-import { BOOTSTRAP_XS, removeTrailingSpace } from '../utils';
+import Link from "next/link";
+import useWindowSize from "../hooks/useWindowSize";
+import { BOOTSTRAP_XS, removeTrailingSpace } from "../utils";
 
 export default function ProductCardBody({ product }) {
   const windowSize = useWindowSize();
   const isWindowXs = windowSize.width && windowSize.width <= BOOTSTRAP_XS;
 
-  if(isWindowXs) {
+  if (isWindowXs) {
     return (
       <div className="card-body card-img-overlay text-center">
         <h3>
@@ -23,9 +23,7 @@ export default function ProductCardBody({ product }) {
           className="card-title"
           aria-label={`Go to details page for ${product.title}`}
         >
-          <h3 className="h4 font-weight-normal">
-            {product.title}
-          </h3>
+          <h3 className="h4 font-weight-normal">{product.title}</h3>
         </a>
       </Link>
       <ProductCardAbout product={product} />
@@ -34,13 +32,13 @@ export default function ProductCardBody({ product }) {
 }
 
 function ProductCardAbout({ product }) {
-  if(!product.about || !product.about.length) {
+  if (!product.about || !product.about.length) {
     return null;
   }
-  
-  if(product.about.length > 128) {
-    const shortText = product.about.substring(0, 115);
-    const displayText =  removeTrailingSpace(shortText);
+
+  if (product.about.length > 128) {
+    const shortText = product.about.substring(0, 125);
+    const displayText = removeTrailingSpace(shortText);
     return (
       <Link href={`/products/${product.productId}`}>
         <a className="text-decoration-none text-dark">
