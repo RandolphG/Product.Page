@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 import "../styles/styles.css";
+import "../styles/buttonGroup.scss";
 
 function MyApp({ Component, pageProps }) {
   return (

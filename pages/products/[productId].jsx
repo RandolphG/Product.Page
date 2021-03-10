@@ -107,16 +107,7 @@ function ProductHeader({ product }) {
   return (
     <div>
       <Link href={`/`}>
-        <div
-          style={{
-            height: "30px",
-            width: "40px",
-            cursor: "pointer",
-            content: "BACK",
-          }}
-        >
-          BACK
-        </div>
+        <div>BACK</div>
       </Link>
       <h1>{product.title}</h1>
       <p>{product.about}</p>

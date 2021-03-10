@@ -3,6 +3,34 @@ import ProductCardImage from "../components/ProductCardImage";
 import { getProducts } from "../services/products-service";
 import { motion } from "framer-motion";
 
+/* Our custom easing*/
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+/* Custom variant */
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export async function getServerSideProps() {
   try {
     return { props: { products: await getProducts() } };
@@ -20,7 +48,13 @@ export default function Home({ error, products }) {
   return (
     <motion.div
       key={`home-page`}
-      exit={{ opacity: 0, x: -100 }}
+      initial="initial"
+      animate="animate"
+      exit={{ opacity: 0 }}
+      variants={{
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+      }}
       className="container"
     >
       <h1>Online Store</h1>
@@ -31,7 +65,7 @@ export default function Home({ error, products }) {
         </p>
       </blockquote>
       <h2>Products</h2>
-      <div className="row">
+      <motion.div variants={stagger} className="row">
         {products.map((product) => (
           <div
             key={`p-${product.productId}`}
@@ -43,7 +77,7 @@ export default function Home({ error, products }) {
             </motion.div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
