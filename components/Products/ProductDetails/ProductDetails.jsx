@@ -30,7 +30,12 @@ const ProductDetails = ({ product, isWindowMd }) => {
   return (
     <div className="col col-12 col-md-6 pl-5">
       <Options product={product} isWindowMd={isWindowMd} />
-      <button className="btn btn-success btn-lg w-100 mb-3">Buy Now</button>
+      <button
+        onClick={() => alert(`buy now clicked`)}
+        className="btn btn-success btn-lg w-100 mb-3"
+      >
+        Buy Now
+      </button>
       <Details product={product} />
     </div>
   );
