@@ -3,12 +3,8 @@ import useWindowSize from "../../hooks";
 import { getProducts } from "../../services";
 import { BOOTSTRAP_LG } from "../../utils";
 import { motion } from "framer-motion";
-import {
-  ProductHeader,
-  SlickSlider,
-  ProductImage,
-  ProductDetails,
-} from "../../components";
+import { ProductDetails } from "../../components";
+import ProductImages from "../../components/ProductImages";
 
 const animationSettings = {
   initial: { opacity: 0 },
@@ -40,15 +36,12 @@ const ProductPage = ({ product }) => {
       className="container mt-4"
     >
       <div className="row">
-        <div className="col col-12 col-md-6">
-          <ProductImage product={product} selectedImg={selectedImg} />
-          <SlickSlider
-            product={product}
-            onClick={setSelectedImg}
-            selectedImg={setSelectedImg}
-          />
-          {isWindowMd && <ProductHeader product={product} />}
-        </div>
+        <ProductImages
+          selectedImg={selectedImg}
+          isWindowMd={isWindowMd}
+          product={product}
+          setSelectedImg={setSelectedImg}
+        />
         <ProductDetails product={product} isWindowMd={isWindowMd} />
       </div>
     </motion.div>

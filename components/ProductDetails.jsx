@@ -5,12 +5,12 @@ import ButtonGroup from "./ButtonGroup";
 const ProductDetails = ({ product, isWindowMd }) => (
   <div className="col col-12 col-md-6 pl-5">
     {!isWindowMd && <ProductHeader product={product} />}
-    {product.options.map((option) => {
+    {product.options.map((option, idx) => {
       switch (option.style) {
         case "dropdown":
-          return <DropDown option={option} />;
+          return <DropDown option={option} idx={idx} />;
         case "button group":
-          return <ButtonGroup option={option} />;
+          return <ButtonGroup option={option} idx={idx} />;
       }
     })}
     <button className="btn btn-success btn-lg w-100 mb-3">Buy Now</button>
