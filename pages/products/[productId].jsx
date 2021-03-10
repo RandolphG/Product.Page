@@ -3,8 +3,7 @@ import useWindowSize from "../../hooks";
 import { getProducts } from "../../services";
 import { BOOTSTRAP_LG } from "../../utils";
 import { motion } from "framer-motion";
-import { ProductDetails } from "../../components";
-import ProductImages from "../../components/ProductImages";
+import { ProductDetails, ProductImages } from "../../components";
 
 const animationSettings = {
   initial: { opacity: 0 },
