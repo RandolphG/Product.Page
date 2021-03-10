@@ -2,7 +2,35 @@ import Link from "next/link";
 import useWindowSize from "../hooks/useWindowSize";
 import { BOOTSTRAP_XS, removeTrailingSpace } from "../utils";
 
-export default function ProductCardBody({ product }) {
+const ProductCardAbout = ({ product }) => {
+  if (!product.about || !product.about.length) {
+    return null;
+  }
+
+  if (product.about.length > 128) {
+    const shortText = product.about.substring(0, 125);
+    const displayText = removeTrailingSpace(shortText);
+    return (
+      <Link href={`/products/${product.productId}`}>
+        <a className="text-decoration-none text-dark">
+          {`${displayText}... `}
+          <span className="sr-only">Read more about {product.title}</span>
+        </a>
+      </Link>
+    );
+  }
+
+  return (
+    <Link href={`/products/${product.productId}`}>
+      <a className="text-decoration-none text-dark">
+        {product.about}
+        <span className="sr-only">Go to details page for {product.title}</span>
+      </a>
+    </Link>
+  );
+};
+
+const ProductCardBody = ({ product }) => {
   const windowSize = useWindowSize();
   const isWindowXs = windowSize.width && windowSize.width <= BOOTSTRAP_XS;
 
@@ -29,32 +57,5 @@ export default function ProductCardBody({ product }) {
       <ProductCardAbout product={product} />
     </div>
   );
-}
-
-function ProductCardAbout({ product }) {
-  if (!product.about || !product.about.length) {
-    return null;
-  }
-
-  if (product.about.length > 128) {
-    const shortText = product.about.substring(0, 125);
-    const displayText = removeTrailingSpace(shortText);
-    return (
-      <Link href={`/products/${product.productId}`}>
-        <a className="text-decoration-none text-dark">
-          {`${displayText}... `}
-          <span className="sr-only">Read more about {product.title}</span>
-        </a>
-      </Link>
-    );
-  }
-
-  return (
-    <Link href={`/products/${product.productId}`}>
-      <a className="text-decoration-none text-dark">
-        {product.about}
-        <span className="sr-only">Go to details page for {product.title}</span>
-      </a>
-    </Link>
-  );
-}
+};
+export default ProductCardBody;
