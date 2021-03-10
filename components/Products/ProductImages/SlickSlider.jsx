@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { defaultAlt, defaultUrl } from "../utils";
+import { defaultAlt, defaultUrl } from "../../../utils";
 
 const SlickSlider = ({ product, onClick, selectedImg }) => (
   <Slider

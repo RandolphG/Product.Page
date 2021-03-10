@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { defaultUrl } from "../utils";
+import { defaultUrl } from "../../../utils";
 
 export default function ProductCardImage({ product }) {
   return (

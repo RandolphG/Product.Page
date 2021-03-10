@@ -1,12 +1,5 @@
 import { getProducts } from "../services";
-import { motion } from "framer-motion";
-import { ProductCards } from "../components";
-
-const animationSettings = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+import { Main } from "../components";
 
 export async function getServerSideProps() {
   try {
@@ -22,23 +15,5 @@ export default function Home({ error, products }) {
     return error || "internal server error";
   }
 
-  const Title = () => <h1>Online Store</h1>;
-  const SubTitle = () => <h2>Products</h2>;
-  const Header = () => (
-    <blockquote className="blockquote">
-      <p className="font-italic">
-        Lorem ipsum dolor sit amet, exercitation deserunt exercitation ea velit
-        eu consequat laborum Lorem occaecat ea.
-      </p>
-    </blockquote>
-  );
-
-  return (
-    <motion.div key={`home-page`} className="container">
-      <Title />
-      <Header />
-      <SubTitle />
-      <ProductCards products={products} />
-    </motion.div>
-  );
+  return <Main products={products} />;
 }

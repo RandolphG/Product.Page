@@ -1,6 +1,6 @@
-export default function DropDown({ option, idx }) {
+const DropDown = ({ option }) => {
   return (
-    <div key={idx} className="row my-3">
+    <div className="row my-3">
       <h2 className="col-3 h4 pr-3">{option.name}</h2>
       <select className="col-3" name={option.name} length="5">
         {option &&
@@ -12,4 +12,5 @@ export default function DropDown({ option, idx }) {
       </select>
     </div>
   );
-}
+};
+export default DropDown;

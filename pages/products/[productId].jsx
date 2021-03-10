@@ -2,14 +2,7 @@ import { useState } from "react";
 import useWindowSize from "../../hooks";
 import { getProducts } from "../../services";
 import { BOOTSTRAP_LG } from "../../utils";
-import { motion } from "framer-motion";
-import { ProductDetails, ProductImages } from "../../components";
-
-const animationSettings = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+import { Products } from "../../components";
 
 export async function getServerSideProps(context) {
   try {
@@ -29,21 +22,12 @@ const ProductPage = ({ product }) => {
   const isWindowMd = windowSize.width && windowSize.width <= BOOTSTRAP_LG;
 
   return (
-    <motion.div
-      key={`product-page`}
-      {...animationSettings}
-      className="container mt-4"
-    >
-      <div className="row">
-        <ProductImages
-          selectedImg={selectedImg}
-          isWindowMd={isWindowMd}
-          product={product}
-          setSelectedImg={setSelectedImg}
-        />
-        <ProductDetails product={product} isWindowMd={isWindowMd} />
-      </div>
-    </motion.div>
+    <Products
+      product={product}
+      selectedImg={selectedImg}
+      isWindowMd={isWindowMd}
+      setSelectedImg={setSelectedImg}
+    />
   );
 };
 

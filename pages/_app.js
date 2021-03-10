@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import "../styles/styles.css";
 import "../styles/buttonGroup.scss";
-import { HeadLinks } from "../components";
+import { HeadLinks } from "../components/HeadLinks";
 
 function MyApp({ Component, pageProps }) {
   return (

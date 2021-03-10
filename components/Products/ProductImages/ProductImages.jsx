@@ -1,4 +1,6 @@
-import { ProductHeader, ProductImage, SlickSlider } from "./index";
+import ProductImage from "./ProductImage";
+import SlickSlider from "./SlickSlider";
+import ProductHeader from "./ProductHeader";
 
 const ProductImages = ({
   setSelectedImg,
