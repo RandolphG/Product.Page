@@ -1,6 +1,6 @@
 # Cascade Platinum Actionpacs
 
-![IMG_00](_actionpacs.gif)
+![IMG_00](_preview.gif)
 
 ### Installation process :
 
