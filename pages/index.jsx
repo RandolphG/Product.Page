@@ -1,5 +1,5 @@
 import { getProducts } from "../services";
-import { Main } from "../components";
+import { MainPage } from "../components";
 
 export async function getServerSideProps() {
   try {
@@ -15,5 +15,5 @@ export default function Home({ error, products }) {
     return error || "internal server error";
   }
 
-  return <Main products={products} />;
+  return <MainPage products={products} />;
 }

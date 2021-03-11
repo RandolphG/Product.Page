@@ -1,29 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ProductImages } from "./ProductImages";
-import { ProductDetails } from "./ProductDetails";
+import { Images } from "./Images";
+import { Details } from "./Details";
+
+let easing = [0.6, -0.05, 0.01, 0.99];
 
 const animationSettings = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  initial: {
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing },
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+  exit: { opacity: 0, transition: { duration: 1.6, ease: easing } },
 };
 
 const Products = ({ selectedImg, isWindowMd, product, setSelectedImg }) => {
   return (
     <motion.div
       key={`product-page`}
+      className="product-page"
       {...animationSettings}
-      className="container mt-4"
     >
-      <div className="row">
-        <ProductImages
+      <div className="container">
+        <Images
           selectedImg={selectedImg}
           isWindowMd={isWindowMd}
           product={product}
           setSelectedImg={setSelectedImg}
         />
-        <ProductDetails product={product} isWindowMd={isWindowMd} />
+        <Details product={product} isWindowMd={isWindowMd} />
       </div>
     </motion.div>
   );

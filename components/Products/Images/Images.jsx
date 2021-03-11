@@ -1,13 +1,7 @@
 import ProductImage from "./ProductImage";
 import SlickSlider from "./SlickSlider";
-import ProductHeader from "./ProductHeader";
 
-const ProductImages = ({
-  setSelectedImg,
-  product,
-  isWindowMd,
-  selectedImg,
-}) => (
+const Images = ({ setSelectedImg, product, selectedImg }) => (
   <div className="col col-12 col-md-6">
     <ProductImage product={product} selectedImg={selectedImg} />
     <SlickSlider
@@ -15,8 +9,7 @@ const ProductImages = ({
       onClick={setSelectedImg}
       selectedImg={setSelectedImg}
     />
-    {isWindowMd && <ProductHeader product={product} />}
   </div>
 );
 
-export default ProductImages;
+export default Images;

@@ -1,0 +1,194 @@
+
+
+@font-face {
+  font-family: 'operatorMonoBoldItalic';
+  src: url("../public/fonts/OperatorMono-BoldItalic.woff") format("woff2");
+}
+
+$font-main: 'operatorMonoBoldItalic', sans-serif;
+
+.slick-slider {
+  height: 102px;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: #000;
+}
+
+.main{
+  font-family:$font-main ;
+  background: greenyellow;
+  display: flex;
+  padding: 1rem;
+  height: 90vh;
+  width: 100vw;
+  min-width: 425px;
+  .container{
+    background: blueviolet;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    max-width: 925px;
+    .title{
+      background: crimson;
+    }
+    .quote{
+      background: coral;
+    }
+    .subtitle{
+      background: deepskyblue;
+    }
+    .products{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background: blueviolet;
+      justify-content: center;
+      .container{
+        display: flex;
+        flex-direction: row;
+        background: black;
+        justify-content: space-around;
+        .card{
+          display: flex;
+          flex-direction: column;
+          background: cornflowerblue;
+          width: 40%;
+          .card-img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            max-height: 250px;
+          }
+          .card-body{
+            background: deeppink;
+            .card-title{
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-page {
+  background: blue;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .container{
+    background: crimson;
+    display: flex;
+    max-width: 1000px;
+    .product-details {
+      font-family: $font-main;
+      background: aqua;
+      display: flex;
+      flex-direction: column;
+      width: 40vw;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 1rem;
+      .top-section{
+        background: tomato;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .product-title{
+          background: cadetblue;
+          font-size: 3rem;
+        }
+        .back-button{
+          font-size: 1rem;
+          background: antiquewhite;
+          &:hover {
+            color:darkgreen;
+          }
+        }
+      }
+      .product-description{
+        background: chartreuse;
+        font-size: 1rem;
+      }
+      .selection{
+        background: crimson;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin-bottom: 1rem;
+        justify-content: flex-start;
+        .container{
+          background: blue;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: baseline;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          .size{
+            background: coral;
+            font-size: 1.5rem;
+          }
+          .select{
+            background: greenyellow;
+          }
+        }
+      }
+      .button-group{
+        background: darkcyan;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+        .title{
+          background: deepskyblue;
+          font-size: 1.5rem;
+          width: 100%;
+        }
+        .buttons-container{
+          background: greenyellow;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: baseline;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          .buttons-group-btns{
+            font-size: .8rem;
+            margin-left: 0.3rem ;
+          }
+        }
+      }
+      .buy-button{
+        margin-bottom: 1rem;
+      }
+      .details{
+        background: blue;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .list{
+          background: crimson;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          .details-list-item{
+            background: greenyellow;
+            margin-bottom: .2rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+

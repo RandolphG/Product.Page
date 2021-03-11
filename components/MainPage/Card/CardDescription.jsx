@@ -1,7 +1,7 @@
 import { removeTrailingSpace } from "../../../utils";
 import Link from "next/link";
 
-const ProductCardAbout = ({ product }) => {
+const CardDescription = ({ product }) => {
   if (!product.about || !product.about.length) {
     return null;
   }
@@ -18,15 +18,6 @@ const ProductCardAbout = ({ product }) => {
       </Link>
     );
   }
-
-  return (
-    <Link href={`/products/${product.productId}`}>
-      <a className="text-decoration-none text-dark">
-        {product.about}
-        <span className="sr-only">Go to details page for {product.title}</span>
-      </a>
-    </Link>
-  );
 };
 
-export default ProductCardAbout;
+export default CardDescription;

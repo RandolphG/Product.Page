@@ -1,17 +1,16 @@
 import { AnimatePresence } from "framer-motion";
-import "../styles/styles.css";
-import "../styles/buttonGroup.scss";
+import "../styles/productDetails.scss";
 import { HeadLinks } from "../components/HeadLinks";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps, router }) => {
   return (
     <>
       <HeadLinks />
       <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} />
+        <Component {...pageProps} keu={router.route} />
       </AnimatePresence>
     </>
   );
-}
+};
 
 export default MyApp;

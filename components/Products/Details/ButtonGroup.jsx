@@ -1,4 +1,4 @@
-export default function ButtonGroup({ option, idx }) {
+const ButtonGroup = ({ option, idx }) => {
   return (
     <div key={idx} className="button-group">
       <h2 className="title">{option.name}</h2>
@@ -7,7 +7,7 @@ export default function ButtonGroup({ option, idx }) {
           option.values.map((value, idx) => (
             <button
               key={`button-${idx}`}
-              className="btn btn-primary m-1"
+              className="buttons-group-btns"
               value={value.value}
             >
               {value.value}
@@ -16,4 +16,6 @@ export default function ButtonGroup({ option, idx }) {
       </div>
     </div>
   );
-}
+};
+
+export default ButtonGroup;
