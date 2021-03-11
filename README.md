@@ -16,9 +16,3 @@ $ cd project
 $ yarn or npm i
 $ yarn dev or npm run dev
 ```
-
--	Reusable React component that will render the layout provided,
--   rResponsive Design. 
--	Rendered data from a JSON file
--	Re-usability
--	Use Slick Carousel
