@@ -3,13 +3,7 @@ import Info from "./Info";
 import Options from "./Options";
 import ListItem from "./ListItem";
 import Button from "./Button";
-
-const animationSettings = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-  transition: { duration: 0.6 },
-};
+import { animationSettings } from "../../MotionSettings";
 
 const Information = ({ product }) => {
   return (

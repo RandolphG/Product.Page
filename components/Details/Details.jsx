@@ -3,23 +3,7 @@ import { motion } from "framer-motion";
 import { Images } from "./Images";
 import { Information } from "./Information";
 import { Navbar } from "../Navbar";
-
-const ease = [0.6, -0.05, 0.01, 0.99];
-const duration = 1.0;
-const transition = {
-  duration,
-  ease,
-};
-const animationSettings = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition,
-  },
-  exit: { opacity: 0, transition },
-};
+import { animationSettings } from "../MotionSettings";
 
 const Details = ({ selectedImg, product, setSelectedImg }) => {
   return (

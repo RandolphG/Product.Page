@@ -2,21 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Cards from "./Cards";
 import { Navbar } from "../Navbar";
-let easing = [0.6, -0.05, 0.01, 0.99];
-
-const animationSettings = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 1.0,
-      ease: easing,
-    },
-  },
-  exit: { opacity: 0, transition: { duration: 1.6 } },
-};
+import { animationSettings } from "../MotionSettings";
 
 const Main = ({ products }) => {
   const Quote = () => (

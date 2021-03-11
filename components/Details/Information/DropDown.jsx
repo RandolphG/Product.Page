@@ -1,29 +1,5 @@
 import { motion } from "framer-motion";
-
-const ease = [0.6, -0.05, 0.01, 0.99];
-const duration = 1.0;
-const transition = {
-  duration,
-  ease,
-};
-
-const fadeInUp = {
-  initial: {
-    y: 10,
-    opacity: 0,
-    transition,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition,
-  },
-  exit: {
-    y: 10,
-    opacity: 0,
-    transition,
-  },
-};
+import { fadeInUp } from "../../MotionSettings";
 
 const DropDown = ({ option }) => {
   return (
