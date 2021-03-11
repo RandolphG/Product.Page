@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ProductCards from "./ProductCards";
+import Cards from "./Cards";
+import { Navbar } from "../Navbar";
 let easing = [0.6, -0.05, 0.01, 0.99];
 
 const animationSettings = {
@@ -17,8 +18,7 @@ const animationSettings = {
   exit: { opacity: 0, transition: { duration: 1.6 } },
 };
 
-const MainPage = ({ products }) => {
-  const Title = () => <h1 className="title">Online Store</h1>;
+const Main = ({ products }) => {
   const Quote = () => (
     <blockquote className="quote">
       <p className="font-italic">
@@ -27,18 +27,22 @@ const MainPage = ({ products }) => {
       </p>
     </blockquote>
   );
-  const SubTitle = () => <h2 className="subtitle">Products</h2>;
+  const SubTitle = () => (
+    <div className="subheader">
+      <h2 className="subtitle">Products</h2>
+    </div>
+  );
 
   return (
     <motion.div key={`home-page`} className="main" {...animationSettings}>
       <div className="container">
-        <Title />
+        <Navbar />
         <Quote />
         <SubTitle />
-        <ProductCards products={products} />
+        <Cards products={products} />
       </div>
     </motion.div>
   );
 };
 
-export default MainPage;
+export default Main;

@@ -40,11 +40,11 @@ const slideOut = {
   },
 };
 
-const Description = ({ product }) => {
+const Info = ({ product }) => {
   return (
     <motion.div className="description">
       <div className="top">
-        <motion.h1 {...fadeInUp} className="title">
+        <motion.h1 {...fadeInUp} className="name">
           {product.title}
         </motion.h1>
         <Link href={`/`}>
@@ -60,4 +60,4 @@ const Description = ({ product }) => {
   );
 };
 
-export default Description;
+export default Info;

@@ -9,14 +9,14 @@ const transition = {
 const scaleUp = {
   initial: {
     opacity: 0,
-    scale: 0.7,
+    scale: 0.9,
   },
   animate: {
     opacity: 1,
     scale: 1,
     transition,
   },
-  exit: { opacity: 0, scale: 0.5, transition },
+  exit: { opacity: 0, scale: 0.7, transition },
 };
 
 const Image = ({ product, selectedImg }) => (

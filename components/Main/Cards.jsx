@@ -1,10 +1,10 @@
 import Card from "./Card/Card";
 import { motion } from "framer-motion";
 
-const ProductCards = ({ products }) => {
+const Cards = ({ products }) => {
   return (
-    <div className="products">
-      <motion.div className="container">
+    <div className="cards">
+      <motion.div className="outer-border">
         {products &&
           products.map((product, idx) => (
             <Card key={`Card-${idx}`} product={product} />
@@ -14,4 +14,4 @@ const ProductCards = ({ products }) => {
   );
 };
 
-export default ProductCards;
+export default Cards;

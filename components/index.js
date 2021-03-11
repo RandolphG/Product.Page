@@ -1,3 +1,3 @@
-export { MainPage } from "./MainPage";
+export { Main } from "./Main";
 export { HeadLinks } from "./HeadLinks";
-export { Products } from "./Products";
+export { Details } from "./Details";

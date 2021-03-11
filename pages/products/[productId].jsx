@@ -1,8 +1,6 @@
 import { useState } from "react";
-import useWindowSize from "../../hooks";
 import { getProducts } from "../../services";
-import { BOOTSTRAP_LG } from "../../utils";
-import { Products } from "../../components";
+import { Details } from "../../components";
 
 export async function getServerSideProps(context) {
   try {
@@ -18,14 +16,11 @@ export async function getServerSideProps(context) {
 
 const ProductPage = ({ product }) => {
   const [selectedImg, setSelectedImg] = useState(0);
-  const windowSize = useWindowSize();
-  const isWindowMd = windowSize.width && windowSize.width <= BOOTSTRAP_LG;
 
   return (
-    <Products
+    <Details
       product={product}
       selectedImg={selectedImg}
-      isWindowMd={isWindowMd}
       setSelectedImg={setSelectedImg}
     />
   );

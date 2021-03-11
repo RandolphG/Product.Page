@@ -1,0 +1,11 @@
+@import "variables";
+.navbar{
+  font-family: $font-main;
+  //background: deeppink;
+  width: 100%;
+  max-width: 800px;
+  border-bottom: black 2px solid;
+  .title{
+    //background: crimson;
+  }
+}

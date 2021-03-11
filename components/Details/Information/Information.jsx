@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Description from "./Description";
+import Info from "./Info";
 import Options from "./Options";
 import ListItem from "./ListItem";
 import Button from "./Button";
@@ -11,14 +11,14 @@ const animationSettings = {
   transition: { duration: 0.6 },
 };
 
-const Details = ({ product }) => {
+const Information = ({ product }) => {
   return (
-    <motion.div className="details" {...animationSettings}>
-      <Description product={product} />
+    <motion.div className="information" {...animationSettings}>
+      <Info product={product} />
       <Options product={product} />
       <Button />
       <ListItem product={product} />
     </motion.div>
   );
 };
-export default Details;
+export default Information;
