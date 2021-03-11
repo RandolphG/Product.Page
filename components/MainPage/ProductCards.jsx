@@ -1,14 +1,15 @@
 import Card from "./Card/Card";
+import { motion } from "framer-motion";
 
 const ProductCards = ({ products }) => {
   return (
     <div className="products">
-      <div className="container">
+      <motion.div className="container">
         {products &&
           products.map((product, idx) => (
             <Card key={`Card-${idx}`} product={product} />
           ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

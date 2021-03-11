@@ -6,8 +6,8 @@ const MyApp = ({ Component, pageProps, router }) => {
   return (
     <>
       <HeadLinks />
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} keu={router.route} />
+      <AnimatePresence initial={false} exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </>
   );

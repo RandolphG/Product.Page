@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 import { Images } from "./Images";
 import { Details } from "./Details";
 
-let easing = [0.6, -0.05, 0.01, 0.99];
-
+const ease = [0.6, -0.05, 0.01, 0.99];
+const duration = 1.0;
+const transition = {
+  duration,
+  ease,
+};
 const animationSettings = {
   initial: {
     opacity: 0,
-    transition: { duration: 0.6, ease: easing },
   },
   animate: {
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
+    transition,
   },
-  exit: { opacity: 0, transition: { duration: 1.6, ease: easing } },
+  exit: { opacity: 0, transition },
 };
 
 const Products = ({ selectedImg, isWindowMd, product, setSelectedImg }) => {

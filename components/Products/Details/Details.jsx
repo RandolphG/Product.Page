@@ -4,16 +4,16 @@ import Options from "./Options";
 import ListItem from "./ListItem";
 import Button from "./Button";
 
-const detailsAnimation = {
+const animationSettings = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
-  transition: { duration: 1.2 },
+  transition: { duration: 0.6 },
 };
 
 const Details = ({ product }) => {
   return (
-    <motion.div className="product-details" {...detailsAnimation}>
+    <motion.div className="details" {...animationSettings}>
       <Description product={product} />
       <Options product={product} />
       <Button />

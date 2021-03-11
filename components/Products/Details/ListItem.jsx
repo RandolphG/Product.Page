@@ -1,9 +1,9 @@
 const ListItem = ({ product }) => (
-  <ul className="details">
+  <ul className="details-ul">
     <div className="list">
       {product &&
         product.details.map((bullet, idx) => (
-          <li className="details-list-item" key={`bullet=${idx}`}>
+          <li className="item" key={`bullet=${idx}`}>
             {bullet}
           </li>
         ))}

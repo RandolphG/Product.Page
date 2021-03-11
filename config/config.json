@@ -4,30 +4,12 @@
       "productId": "857b2ae73205",
       "title": "Officia",
       "images": [
-        {
-          "url": "https://via.placeholder.com/350",
-          "alt": "Lorem ipsum dolor sit amet, non cupidatat ullamco velit ut cupidatat ea et cupidatat esse velit."
-        },
-        {
-          "url": "https://via.placeholder.com/350X500",
-          "alt": "Lorem ipsum dolor sit amet, non cupidatat ullamco velit ut cupidatat ea et cupidatat esse velit."
-        },
-        {
-          "url": "https://via.placeholder.com/200x300",
-          "alt": "Lorem ipsum dolor sit amet, non cupidatat ullamco velit ut cupidatat ea et cupidatat esse velit."
-        },
-        {
-          "url": "https://via.placeholder.com/400",
-          "alt": "Lorem ipsum dolor sit amet, non cupidatat ullamco velit ut cupidatat ea et cupidatat esse velit."
-        },
-        {
-          "url": "https://via.placeholder.com/150x200",
-          "alt": "Lorem ipsum dolor sit amet, non cupidatat ullamco velit ut cupidatat ea et cupidatat esse velit."
-        },
-        {
-          "url": "https://via.placeholder.com/320x440",
-          "alt": "Lorem ipsum dolor sit amet, non cupidatat ullamco velit ut cupidatat ea et cupidatat esse velit."
-        }
+        { "url": "https://via.placeholder.com/350", "alt": "Lorem ipsum dolor sit amet."},
+        { "url": "https://via.placeholder.com/400", "alt": "Lorem ipsum dolor sit amet."},
+        { "url": "https://via.placeholder.com/350", "alt": "Lorem ipsum dolor sit amet."},
+        { "url": "https://via.placeholder.com/400", "alt": "Lorem ipsum dolor sit amet."},
+        { "url": "https://via.placeholder.com/350", "alt": "Lorem ipsum dolor sit amet."},
+        { "url": "https://via.placeholder.com/400", "alt": "Lorem ipsum dolor sit amet."}
       ],
       "about": "\tLorem ipsum dolor sit amet, officia elit cupidatat sint et Lorem anim quis laboris aliqua. anim elit ipsum adipisicing eiusmod. Non do laborum pariatur eiusmod qui reprehenderit exercitation nisi cillum officia magna officia adipisicing nulla nisi occaecat velit.",
       "details": [

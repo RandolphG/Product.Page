@@ -1,39 +1,61 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-let easing = [0.6, -0.05, 0.01, 0.99];
-
+const easing = [0.6, -0.05, 0.01, 0.99];
+const duration = 0.8;
+const transition = { duration, ease: easing };
 const fadeInUp = {
   initial: {
-    y: 60,
+    y: 10,
     opacity: 0,
-    transition: { duration: 0.6, ease: easing },
+    transition,
   },
   animate: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
+    transition,
   },
   exit: {
-    y: 60,
+    y: 10,
     opacity: 0,
-    transition: { duration: 0.6, ease: easing },
+    transition,
+  },
+};
+
+const slideOut = {
+  initial: {
+    x: 10,
+    opacity: 0,
+    transition,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition,
+  },
+  exit: {
+    x: 10,
+    opacity: 0,
+    transition,
   },
 };
 
 const Description = ({ product }) => {
   return (
-    <motion.div {...fadeInUp} className="back-link">
-      <div className="top-section">
-        <h1 className="product-title">{product.title}</h1>
+    <motion.div className="description">
+      <div className="top">
+        <motion.h1 {...fadeInUp} className="title">
+          {product.title}
+        </motion.h1>
         <Link href={`/`}>
-          <div className="back-button">BACK</div>
+          <motion.div {...slideOut} className="back-button">
+            BACK
+          </motion.div>
         </Link>
       </div>
-      <p className="product-description">{product.about}</p>
+      <motion.p {...slideOut} className="about">
+        {product.about}
+      </motion.p>
     </motion.div>
   );
 };

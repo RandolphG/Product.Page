@@ -1,9 +1,9 @@
-import ProductImage from "./ProductImage";
+import Image from "./Image";
 import SlickSlider from "./SlickSlider";
 
 const Images = ({ setSelectedImg, product, selectedImg }) => (
-  <div className="col col-12 col-md-6">
-    <ProductImage product={product} selectedImg={selectedImg} />
+  <div key="slick" className="slick">
+    <Image product={product} selectedImg={selectedImg} />
     <SlickSlider
       product={product}
       onClick={setSelectedImg}
