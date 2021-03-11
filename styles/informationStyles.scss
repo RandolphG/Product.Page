@@ -9,7 +9,7 @@
   justify-content: flex-start;
   box-sizing: border-box;
   padding: 1rem;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $xsmall) {
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
@@ -52,7 +52,7 @@
     width: 50%;
     margin-bottom: 1rem;
     justify-content: flex-start;
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $xsmall) {
       width: 100%;
     }
     .container{
@@ -64,7 +64,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: $xsmall) {
         width: 50%;
       }
       .size{

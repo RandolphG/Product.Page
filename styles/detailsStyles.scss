@@ -27,7 +27,7 @@
       flex-direction: row;
       justify-content: center;
       width: 100%;
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: $xsmall) {
         //background: deeppink;
         flex-direction: column;
         justify-content: flex-start;

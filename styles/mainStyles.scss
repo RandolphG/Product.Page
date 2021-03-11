@@ -33,21 +33,35 @@
       }
     }
     .cards{
+      //background: blueviolet;
       display: flex;
       flex-direction: row;
       width: 100%;
-      //background: blueviolet;
-      //justify-content: space-between;
       .outer-border{
         //background: black;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media screen and (max-width: $xsmall) {
+          //background: deeppink;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
         .card{
+          //background: cornflowerblue;
           display: flex;
           flex-direction: column;
-          //background: cornflowerblue;
-          width: 40%;
+          width: 340px;
+          @media screen and (max-width: $small) {
+            //background: cornflowerblue;
+            width: 290px;
+            margin-bottom: 1rem;
+          }
+          @media screen and (max-width: $xsmall) {
+            width: 100%;
+          }
           .card-img{
             object-fit: cover;
             object-position: center;
@@ -57,7 +71,6 @@
           .card-body{
             //background: deeppink;
             .card-title{
-
             }
           }
         }
